@@ -72,3 +72,23 @@ CREATE TABLE stg.Siklus_Audit_Master (
     LoadDate DATETIME DEFAULT GETDATE()
 );
 GO
+--6. Staging Table for Dim_Sistem_Sumber 
+CREATE TABLE stg.Sistem_Sumber_Master (
+    Kode_Sumber VARCHAR(50) PRIMARY KEY NOT NULL, 
+    Nama_Sistem VARCHAR(100),
+    Deskripsi VARCHAR(255),
+    Penanggung_Jawab VARCHAR(100),
+    Tanggal_Mulai_Berlaku DATE,
+    LoadDate DATETIME DEFAULT GETDATE()
+);
+GO
+
+--7. Staging khusus untuk Atribut Dimensi Rekomendasi
+CREATE TABLE stg.Rekomendasi_Attributes (
+    ID_Rekom_Sumber VARCHAR(50) PRIMARY KEY NOT NULL,
+    Status_Tindak_Lanjut VARCHAR(50),
+    Tanggal_Target_Selesai DATE,
+    Penanggung_Jawab VARCHAR(100),
+    LoadDate DATETIME DEFAULT GETDATE()
+);
+GO
