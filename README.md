@@ -20,7 +20,7 @@ Satuan Pengawas Internal (SPI) bertanggung jawab untuk melakukan audit dan penga
 
 ## Architecture
 * **Approach:** Kimball
-* **Platform:** SQL Server on Azure VM
+* **Platform:** SQL Server Management Studio
 * **ETL:** T-SQL
 
 ## Key Features
